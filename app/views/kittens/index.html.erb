@@ -13,7 +13,7 @@
       <tr>
         <td><%= kitten.name %></td>
         <td><%= link_to 'Show', kitten %></td>
-        <td><%= link_to 'Edit', edit_note_path(kitten) %></td>
+        <td><%= link_to 'Edit', edit_kitten_path(kitten) %></td>
         <td><%= link_to 'Destroy', kitten, method: :delete, data: { confirm: 'Are you sure you want to kill a cute kitten?' } %></td>
       </tr>
     <% end %>
