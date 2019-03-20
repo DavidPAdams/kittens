@@ -1,2 +1,8 @@
-<h1>Kittens#show</h1>
-<p>Find me in app/views/kittens/show.html.erb</p>
+<h1>Kitten Details</h1>
+<p><strong>Kitten Name: </strong><%= @kitten.name %></p>
+<p><strong>Kitten Age: </strong><%= @kitten.age %></p>
+<p><strong>Kitten Cuteness: </strong><%= @kitten.cuteness %></p>
+<p><strong>Kitten Softness: </strong><%= @kitten.softness %></p>
+
+<%= link_to 'Edit this Kitten', edit_kitten_path(@kitten) %> |
+<%= link_to 'Back to Kitten List', kittens_path %>
