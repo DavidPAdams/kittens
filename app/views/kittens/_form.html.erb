@@ -1,0 +1,12 @@
+<%= form_for(@kitten) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: @kitten.name, autofocus: true %>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+  <%= f.label :cuteness, "Cuteness Rating (1 to 10)" %>
+  <%= f.text_field :cuteness %>
+  <%= f.label :softness, "Softness Rating (1 to 10)" %>
+  <%= f.text_field :softness %>
+  <%= f.submit 'Kittenize' %>
+<% end %>
