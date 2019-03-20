@@ -15,7 +15,7 @@ class KittensController < ApplicationController
 
     respond_to do |format|
       if @kitten.save
-        format.html { redirect_to @kitten, notice: 'Kitten was successfully created.' }
+        format.html { redirect_to @kitten, notice: 'Kitten was successfully created. Oh how cute!' }
         format.json { render :show, status: :created, location: @kitten }
       else
         format.html { render :new }
@@ -27,7 +27,7 @@ class KittensController < ApplicationController
   def update
     respond_to do |format|
       if @kitten.update(kitten_params)
-        format.html { redirect_to @kitten, notice: 'Kitten was successfully updated.' }
+        format.html { redirect_to @kitten, notice: 'Kitten was successfully updated. Awwww that is so precious' }
         format.json { render :show, status: :ok, location: @kitten }
       else
         format.html { render :edit }
@@ -45,7 +45,7 @@ class KittensController < ApplicationController
   def destroy
     @kitten.destroy
     respond_to do |format|
-      format.html { redirect_to kittens_url, notice: 'Kitten was successfully destroyed.' }
+      format.html { redirect_to kittens_url, notice: 'Kitten was successfully destroyed. You are a horrible person!' }
       format.json { head :no_content }
     end    
   end
